@@ -16,6 +16,7 @@ export class UserService {
   }
 
   createUser(user: User) {
+    console.log('createUser : ', user)
     return this.http.post(this.baseUrl, user);
   }
 

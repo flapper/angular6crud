@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { routing } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AddUserComponent } from './add-user/add-user.component';
@@ -9,7 +9,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 
 import {UserService} from "./service/user.service";
-import {AuthenticationService} from "./service/auth.service";
+import {AuthService} from "./service/auth.service";
 import { HttpClientModule } from '@angular/common/http';
 import {ReactiveFormsModule} from "@angular/forms";
 
@@ -23,11 +23,11 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
-    routing,
+    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [AuthenticationService, UserService],
+  providers: [AuthService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

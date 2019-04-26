@@ -19,4 +19,4 @@ const routes: Routes = [
 // })
 
 // export class AppRoutingModule { }
-export const routing = RouterModule.forRoot(routes);
+export const AppRoutingModule = RouterModule.forRoot(routes);
